@@ -1,4 +1,4 @@
-import Form from './src/components/form';
+import Media from './src/components/Media';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './src/HomeScreen';
@@ -18,7 +18,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name='Home' component={HomeScreen} />
-        <Stack.Screen name='Form' component={Form} />
+        <Stack.Screen name='Media' component={Media} />
         <Stack.Screen name='Contador' component={CounterScreen}/>
         <Stack.Screen name='Imagem' component={GeradorImagem}/>
         <Stack.Screen name='Galeria' component={Galeria}/>

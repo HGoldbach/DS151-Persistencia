@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, Button, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import * as LocalAuthentication from 'expo-local-authentication';
 
 const HomeScreen = ({navigation}) => {
@@ -31,14 +31,9 @@ const HomeScreen = ({navigation}) => {
             navigation.navigate('Autenticacao', {autenticacao});
         }
     }
-
-    useEffect(() => {
-        verificarAutenticacao();
-    },[])
-
     return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Form')}>
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Media')}>
                 <Text style={styles.text}>Calcula Média</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate('Contador')}>
